@@ -1,0 +1,337 @@
+---
+description: 'Living Design component inventory — name, category, import path, one-line intent'
+applyTo: '**'
+---
+# Living Design Component Index
+
+Use this index to discover the components in this kit. **Before using any component**, either:
+
+- **Read** the markdown next to the component source — `src/<category>/<dir>/<Name>.md` (Skill) or `client/<category>/<dir>/<Name>.md` (Builder). `<category>` is either `components` (atoms and molecules) or `patterns` (composed recipes). e.g. `Button.md` lives under `src/components/Button/`; `Header.md` lives under `src/patterns/Header/`.
+- **Run** `npx ld-kit show <Name>` from a project root with `@walmart/ld-kit` installed.
+
+The component `.tsx` sits in the same directory; its JSDoc is also authoritative.
+
+## Components (224)
+
+- **A11yDevAssertions** — `./components/A11yDevAssertions`
+- **ActionGroup** — `./components/ActionGroup` — Structured primary/secondary (and optional tertiary) action pair with prescribed Button variants and a fixed layout pattern. For generic button rows, use ButtonGroup instead.
+- **Alert** — `./components/Alert` — Status message (success/info/warning/error)
+- **AlertDialog** — `./components/AlertDialog` — Confirmation dialog (destructive flows)
+- **AlertDialogAction** — `./components/AlertDialog`
+- **AlertDialogCancel** — `./components/AlertDialog`
+- **AlertDialogContent** — `./components/AlertDialog`
+- **AlertDialogTrigger** — `./components/AlertDialog`
+- **AspectRatio** — `./components/AspectRatio`
+- **Attribute** — `./components/Attribute`
+- **Avatar** — `./components/Avatar` — User / entity portrait
+- **AvatarButton** — `./components/Avatar`
+- **AvatarFallback** — `./components/Avatar`
+- **AvatarImage** — `./components/Avatar`
+- **Badge** — `./components/Badge` — Status/label pill — accepts text or count (ReactNode children). Use Badge for any pill with text content; use Tag for integer-only counts.
+- **Banner** — `./components/Banner` — High-impact global announcement; required close
+- **BasicBanner** — `./components/BasicBanner` — Generic promotional banner
+- **Body** — `./components/Text`
+- **BottomNav** — `./components/BottomNav` — Mobile-web bottom navigation bar
+- **BottomSheet** — `./components/BottomSheet` — Modal anchored to the bottom of the viewport
+- **Breadcrumb** — `./components/Breadcrumb` — Hierarchical path navigation
+- **BreadcrumbItem** — `./components/Breadcrumb` — Single breadcrumb entry
+- **Button** — `./components/Button` — Primary/secondary/tertiary/destructive action
+- **ButtonGroup** — `./components/Button` — Related action row (children must be Button elements). For structured primary/secondary action pairs with prescribed variants, see ActionGroup.
+- **ButtonGroupPatterns** — `./components/ButtonGroupPatterns`
+- **Callout** — `./components/Callout` — Anchored onboarding / coach-mark overlay
+- **CalloutLink** — `./components/Callout`
+- **Caption** — `./components/Text`
+- **Card** — `./components/Card` — Structured card surface (header / body / footer)
+- **CardActions** — `./components/Card`
+- **CardContent** — `./components/Card` — Card body slot
+- **CardHeader** — `./components/Card` — Card title and leading content
+- **CardMedia** — `./components/Card`
+- **Carousel** — `./components/Carousel` — Horizontal scrolling content row
+- **CarouselContent** — `./components/Carousel`
+- **CarouselItem** — `./components/Carousel`
+- **CarouselNext** — `./components/Carousel`
+- **CarouselPagination** — `./components/Carousel`
+- **CarouselPrevious** — `./components/Carousel`
+- **CarouselProgressBar** — `./components/Carousel`
+- **CategoryNav** — `./components/CategoryNav` — Category browse navigation
+- **Checkbox** — `./components/Checkbox` — Multi-select choice (group with FormGroup)
+- **Chip** — `./components/Chip` — Interactive filter chip (multi-select; toggles independently)
+- **ChipGroup** — `./components/Chip` — Container for filter-style multi-select chips
+- **Collapse** — `./components/Collapse` — Expand / collapse inline content
+- **Collapsible** — `./components/Collapsible`
+- **CollapsibleContent** — `./components/Collapsible`
+- **CollapsibleTrigger** — `./components/Collapsible`
+- **Command** — `./components/Command` — Cmd-K command palette
+- **CommandDialog** — `./components/Command`
+- **CommandEmpty** — `./components/Command`
+- **CommandGroup** — `./components/Command`
+- **CommandInput** — `./components/Command`
+- **CommandItem** — `./components/Command`
+- **CommandList** — `./components/Command`
+- **CommandSeparator** — `./components/Command`
+- **CommandShortcut** — `./components/Command`
+- **Container** — `./components/Container` — Max-width responsive content wrapper
+- **ContentCard** — `./components/ContentCard` — Editorial / promotional card
+- **ContextMenu** — `./components/ContextMenu`
+- **ContextMenuCheckboxItem** — `./components/ContextMenu`
+- **ContextMenuContent** — `./components/ContextMenu`
+- **ContextMenuItem** — `./components/ContextMenu`
+- **ContextMenuLabel** — `./components/ContextMenu`
+- **ContextMenuRadioGroup** — `./components/ContextMenu`
+- **ContextMenuRadioItem** — `./components/ContextMenu`
+- **ContextMenuSeparator** — `./components/ContextMenu`
+- **ContextMenuShortcut** — `./components/ContextMenu`
+- **ContextMenuSub** — `./components/ContextMenu`
+- **ContextMenuSubContent** — `./components/ContextMenu`
+- **ContextMenuSubTrigger** — `./components/ContextMenu`
+- **ContextMenuTrigger** — `./components/ContextMenu`
+- **CountryCodePhoneInput** — `./components/CountryCodePhoneInput`
+- **CountrySelectBottomSheet** — `./components/CountrySelectBottomSheet`
+- **CountrySelectDropdown** — `./components/CountrySelectDropdown`
+- **CountrySelectGroup** — `./components/CountrySelectGroup`
+- **DataTableBulkActions** — `./components/DataTable`
+- **DataTableCell** — `./components/DataTable`
+- **DataTableCellActions** — `./components/DataTable`
+- **DataTableCellBulkEditTextArea** — `./components/DataTable`
+- **DataTableCellInlineEditTextArea** — `./components/DataTable`
+- **DataTableCellSelect** — `./components/DataTable`
+- **DataTableCellStatus** — `./components/DataTable`
+- **DataTableConfigPanel** — `./components/DataTableConfigPanel`
+- **DataTableHeaderSelect** — `./components/DataTable`
+- **DataTableTitle** — `./components/DataTableTitle`
+- **DateField** — `./components/DateField` — Date input
+- **DatePicker** — `./components/DatePicker` — Calendar-style date selector
+- **DatePickerCalendar** — `./components/DatePickerCalendar`
+- **DateRangePicker** — `./components/DateRangePicker`
+- **Display** — `./components/Text`
+- **Divider** — `./components/Divider` — Section separator (needs surrounding margin)
+- **DropdownMenu** — `./components/DropdownMenu`
+- **DropdownMenuCheckboxItem** — `./components/DropdownMenu`
+- **DropdownMenuContent** — `./components/DropdownMenu`
+- **DropdownMenuItem** — `./components/DropdownMenu`
+- **DropdownMenuLabel** — `./components/DropdownMenu`
+- **DropdownMenuRadioGroup** — `./components/DropdownMenu`
+- **DropdownMenuRadioItem** — `./components/DropdownMenu`
+- **DropdownMenuSeparator** — `./components/DropdownMenu`
+- **DropdownMenuShortcut** — `./components/DropdownMenu`
+- **DropdownMenuSub** — `./components/DropdownMenu`
+- **DropdownMenuSubContent** — `./components/DropdownMenu`
+- **DropdownMenuSubTrigger** — `./components/DropdownMenu`
+- **DropdownMenuTrigger** — `./components/DropdownMenu`
+- **FilterChip** — `./components/FilterChip`
+- **Flag** — `./components/Flag` — Inline label / flag pill
+- **FloatingButton** — `./components/FloatingButton`
+- **FluentCombobox** — `./components/Combobox`
+- **FluentMenu** — `./components/FluentMenu`
+- **FluentMenuDivider** — `./components/FluentMenu`
+- **FluentMenuItem** — `./components/FluentMenu`
+- **FluentMenuList** — `./components/FluentMenu`
+- **FluentMenuTrigger** — `./components/FluentMenu`
+- **FocusTrap** — `./components/FocusTrap`
+- **FormGroup** — `./components/FormGroup` — Group related form controls under a shared label
+- **Grid** — `./components/Grid` — Responsive 12-column layout (always pass hasGutter)
+- **GridColumn** — `./components/Grid` — Grid column (always set sm/md/lg breakpoints)
+- **HeaderInstructional** — `./components/HeaderInstructional`
+- **HeaderSection** — `./components/HeaderSection`
+- **HeaderWidget** — `./components/HeaderWidget`
+- **Heading** — `./components/Text` — Section heading (use as=h2..h6; never skip levels)
+- **HeartView** — `./components/HeartView` — Favorite toggle indicator
+- **HighlightText** — `./components/HighlightText`
+- **IconButton** — `./components/IconButton` — Icon-only interactive button (requires a11yLabel)
+- **Image** — `./components/Image` — LD-wrapped img with mandatory alt or unsafeDecorative
+- **Label** — `./components/Label`
+- **LanguageSelector** — `./components/LanguageSelector`
+- **LineClamp** — `./components/LineClamp`
+- **Link** — `./components/Link` — Inline text link
+- **LinkButton** — `./components/LinkButton` — Link styled as a button
+- **LocationBreadcrumb** — `./components/LocationBreadcrumb`
+- **MagicBox** — `./components/MagicBox`
+- **Masthead** — `./components/Masthead`
+- **Menu** — `./components/Menu` — Triggered action menu
+- **Menubar** — `./components/Menubar`
+- **MenubarCheckboxItem** — `./components/Menubar`
+- **MenubarContent** — `./components/Menubar`
+- **MenubarGroup** — `./components/Menubar`
+- **MenubarItem** — `./components/Menubar`
+- **MenubarLabel** — `./components/Menubar`
+- **MenubarMenu** — `./components/Menubar`
+- **MenubarPortal** — `./components/Menubar`
+- **MenubarRadioGroup** — `./components/Menubar`
+- **MenubarRadioItem** — `./components/Menubar`
+- **MenubarSeparator** — `./components/Menubar`
+- **MenubarShortcut** — `./components/Menubar`
+- **MenubarSub** — `./components/Menubar`
+- **MenubarSubContent** — `./components/Menubar`
+- **MenubarSubTrigger** — `./components/Menubar`
+- **MenubarTrigger** — `./components/Menubar`
+- **MenuItem** — `./components/Menu` — Menu entry
+- **Metric** — `./components/Metric` — KPI / trend display
+- **MetricGroup** — `./components/MetricGroup`
+- **Modal** — `./components/Modal` — Centered overlay dialog (controlled isOpen)
+- **Nudge** — `./components/Nudge` — Coaching hint / reminder
+- **Page** — `./components/Page` — Page shell (renders main landmark + single h1 + skip link). Exactly ONE Page per app — do not nest a Page inside another Page.
+- **PageHeader** — `./components/PageHeader`
+- **Pagination** — `./components/Pagination` — Page navigation control
+- **PaginationContent** — `./components/Pagination`
+- **PaginationEllipsis** — `./components/Pagination`
+- **PaginationItem** — `./components/Pagination`
+- **PaginationLink** — `./components/Pagination`
+- **PaginationNext** — `./components/Pagination`
+- **PaginationPrevious** — `./components/Pagination`
+- **Panel** — `./components/Panel` — Side-drawer overlay (controlled isOpen)
+- **Popover** — `./components/Popover` — Anchored contextual overlay
+- **PrimarySection** — `./components/Section`
+- **ProgressIndicator** — `./components/ProgressIndicator` — Determinate progress bar
+- **ProgressTracker** — `./components/ProgressTracker` — Multi-step progress
+- **ProgressTrackerItem** — `./components/ProgressTracker`
+- **QuantityStepper** — `./components/QuantityStepper` — Increment/decrement stepper (onChange = absolute count)
+- **Radio** — `./components/Radio` — Single-select choice (share name; group via FormGroup)
+- **RadioGroup** — `./components/Radio`
+- **RadioGroupItem** — `./components/Radio`
+- **Rating** — `./components/Rating` — Star rating display
+- **RatingDisplay** — `./components/RatingDisplay`
+- **ResizableHandle** — `./components/Resizable`
+- **ResizablePanel** — `./components/Resizable`
+- **ResizablePanelGroup** — `./components/Resizable`
+- **RichMediaSheet** — `./components/RichMediaSheet` — Rich media bottom sheet
+- **RichSnackbar** — `./components/RichSnackbar` — Rich-content snackbar variant
+- **RichSnackbarContainer** — `./components/RichSnackbar`
+- **RichTextEditor** — `./components/RichTextEditor`
+- **Scrim** — `./components/Scrim`
+- **ScrimOverlay** — `./components/ScrimOverlay`
+- **ScrollArea** — `./components/ScrollArea`
+- **ScrollBar** — `./components/ScrollArea`
+- **SearchBar** — `./components/SearchBar` — Site-wide search bar
+- **SearchField** — `./components/SearchField`
+- **SecondarySection** — `./components/Section`
+- **SectionHeader** — `./components/SectionHeader`
+- **SegmentedControl** — `./components/SegmentedControl` — One-of-many pill toggle (radiogroup semantics)
+- **Select** — `./components/Select` — Option-selection dropdown
+- **SelectCard** — `./components/SelectCard`
+- **SideNavigation** — `./components/SideNavigation`
+- **SideNavigationItem** — `./components/SideNavigation`
+- **SignatureCapture** — `./components/SignatureCapture`
+- **SignatureCaptureBottomSheet** — `./components/SignatureCaptureBottomSheet`
+- **SignatureCapturePanel** — `./components/SignatureCapturePanel`
+- **Skeleton** — `./components/Skeleton` — Block loading placeholder
+- **SkeletonText** — `./components/Skeleton` — Text-line loading placeholder
+- **SkylineBanner** — `./components/SkylineBanner` — Promotional skyline banner
+- **Slider** — `./components/Slider`
+- **Slot** — `./components/Slot`
+- **SpinButton** — `./components/SpinButton`
+- **Spinner** — `./components/Spinner` — Indeterminate loading indicator
+- **Switch** — `./components/Switch` — Boolean toggle
+- **TabNavigation** — `./components/TabNavigation` — Top-level section tabs
+- **TabNavigationItem** — `./components/TabNavigation` — Tab entry
+- **Tag** — `./components/Tag` — Integer count chip — children MUST be a number (TS-enforced). For text labels, use Badge.
+- **TertiarySection** — `./components/Section`
+- **TextArea** — `./components/TextArea` — Multi-line text input
+- **TextField** — `./components/TextField` — Single-line text input
+- **TextFieldSplit** — `./components/TextFieldSplit`
+- **TimerView** — `./components/TimerView` — Countdown timer view
+- **Toggle** — `./components/Toggle`
+- **ToggleGroup** — `./components/ToggleGroup`
+- **ToggleGroupItem** — `./components/ToggleGroup`
+- **Tooltip** — `./components/Tooltip` — Hover/focus contextual help
+- **Tree** — `./components/SideNavigation`
+- **UploadFile** — `./components/UploadFile`
+- **UploadImage** — `./components/UploadImage` — Image upload tile
+- **VisuallyHidden** — `./components/VisuallyHidden` — Screen-reader-only text
+
+## Patterns (95)
+
+- **Accordion** — `./patterns/Accordion` — Stacked expandable sections
+- **AccordionHeader** — `./patterns/Accordion`
+- **AccordionItem** — `./patterns/Accordion`
+- **AccordionPanel** — `./patterns/Accordion`
+- **AccountSideNav** — `./patterns/AccountSideNav` — Account-section side navigation
+- **ActiveCurbsideCard** — `./patterns/ActiveCurbsideCard` — Active curbside order card
+- **AppHeader** — `./patterns/AppHeader`
+- **AutoCareModals** — `./patterns/AutoCareModals`
+- **AutoCareUpsellOfferCard** — `./patterns/AutoCareUpsellOfferCard` — AutoCare upsell offer card
+- **AxBottomNav** — `./patterns/AxBottomNav`
+- **CarouselProductCard** — `./patterns/CarouselProductCard` — Product card sized for carousel rows
+- **CheckInModal** — `./patterns/CheckInModal`
+- **ClockingWidget** — `./patterns/ClockingWidget`
+- **CombinedOrderCard** — `./patterns/CombinedOrderCard`
+- **ContinueShopping** — `./patterns/ContinueShopping` — Continue-shopping carousel section
+- **DelayedDeliveryCard** — `./patterns/DelayedDeliveryCard`
+- **DelayedDeliveryModals** — `./patterns/DelayedDeliveryModals`
+- **DemoModal** — `./patterns/DemoModal`
+- **DesktopFooter** — `./patterns/DesktopFooter` — Desktop footer
+- **FlashDealsCarousel** — `./patterns/FlashDealsCarousel` — Built-in flash-deals product row (writes to Store)
+- **FlashDealsItemTile** — `./patterns/FlashDealsItemTile`
+- **Footer** — `./patterns/Footer`
+- **Form** — `./patterns/SharedForm` — Form wrapper
+- **FormControl** — `./patterns/SharedForm`
+- **FormDescription** — `./patterns/SharedForm`
+- **FormField** — `./patterns/SharedForm`
+- **FormItem** — `./patterns/SharedForm`
+- **FormMessage** — `./patterns/SharedForm`
+- **GetItNowModal** — `./patterns/GetItNowModal`
+- **Header** — `./patterns/Header` — Full responsive site header (search / cart / account)
+- **HeaderDesktop** — `./patterns/Header`
+- **HeaderMobile** — `./patterns/Header`
+- **HeaderMobileTopNav** — `./patterns/Header`
+- **IntelligentInsight** — `./patterns/IntelligentInsight`
+- **IntelligentRecommendation** — `./patterns/IntelligentRecommendation`
+- **ItemRecommendation** — `./patterns/ItemRecommendation`
+- **ItemTile** — `./patterns/ItemTile` — Product tile for carousels (~200px max width)
+- **ItemTileCondensed** — `./patterns/ItemTileCondensed`
+- **JumpRightBackIn** — `./patterns/JumpRightBackIn`
+- **ListAction** — `./patterns/ListAction`
+- **ListActionItem** — `./patterns/ListAction`
+- **ListActionList** — `./patterns/ListAction`
+- **ListAssociate** — `./patterns/ListAssociate`
+- **ListAssociateItem** — `./patterns/ListAssociate`
+- **ListAssociateList** — `./patterns/ListAssociate`
+- **ListGoal** — `./patterns/ListGoal`
+- **ListMembers** — `./patterns/ListMembers`
+- **ListMembersItem** — `./patterns/ListMembers`
+- **ListMembersList** — `./patterns/ListMembers`
+- **ListTeam** — `./patterns/ListTeam`
+- **MaintenanceHealthCard** — `./patterns/MaintenanceHealthCard`
+- **MegaNavActionButton** — `./patterns/MegaNavActionButton`
+- **MobileMenuPanel** — `./patterns/MobileMenuPanel`
+- **MwebFooter** — `./patterns/MwebFooter` — Mobile-web footer
+- **NewArrivalsCarousel** — `./patterns/NewArrivalsCarousel`
+- **OrderCard** — `./patterns/OrderCard`
+- **OrderCardSection** — `./patterns/OrderCardSection`
+- **OrderStatusBanner** — `./patterns/OrderStatusBanner` — Order-status banner
+- **OrderStatusCard** — `./patterns/OrderStatusCard`
+- **OrderStatusSection** — `./patterns/OrderStatusSection`
+- **ProductCardGrid** — `./patterns/ProductCardGrid` — Product card sized for responsive grid columns
+- **ProductCardList** — `./patterns/ProductCardList` — Product card sized for list layouts
+- **PromotionalItemTile** — `./patterns/PromotionalItemTile`
+- **QueueBanner** — `./patterns/QueueBanner`
+- **QueueCard** — `./patterns/QueueCard` — Pickup-queue order card
+- **QueueItemCard** — `./patterns/QueueItemCard`
+- **QueueLanding** — `./patterns/QueueLanding`
+- **QueuePanel** — `./patterns/QueuePanel`
+- **QueueSection** — `./patterns/QueueSection`
+- **ScheduleWidget** — `./patterns/ScheduleWidget`
+- **SearchFilterBar** — `./patterns/SearchFilterBar` — Search results filter bar
+- **SearchResults** — `./patterns/SearchResults`
+- **SearchResultsHeader** — `./patterns/SearchResultsHeader`
+- **ServicesCard** — `./patterns/ServicesCard`
+- **SharedFormLabel** — `./patterns/SharedForm`
+- **Sidebar** — `./patterns/Sidebar`
+- **SidebarContent** — `./patterns/Sidebar`
+- **SidebarFooter** — `./patterns/Sidebar`
+- **SidebarGroup** — `./patterns/Sidebar`
+- **SidebarGroupContent** — `./patterns/Sidebar`
+- **SidebarGroupLabel** — `./patterns/Sidebar`
+- **SidebarHeader** — `./patterns/Sidebar`
+- **SidebarInset** — `./patterns/Sidebar`
+- **SidebarMenu** — `./patterns/Sidebar`
+- **SidebarMenuButton** — `./patterns/Sidebar`
+- **SidebarMenuItem** — `./patterns/Sidebar`
+- **SidebarMenuSub** — `./patterns/Sidebar`
+- **SidebarMenuSubButton** — `./patterns/Sidebar`
+- **SidebarMenuSubItem** — `./patterns/Sidebar`
+- **SidebarProvider** — `./patterns/Sidebar`
+- **SidebarRail** — `./patterns/Sidebar`
+- **SidebarSeparator** — `./patterns/Sidebar`
+- **SidebarShell** — `./patterns/Sidebar`
+- **SidebarTrigger** — `./patterns/Sidebar`
+- **TablePagination** — `./patterns/TablePagination`
