@@ -1,0 +1,91 @@
+/* LD Portable – TextFieldSplit */
+/* TextFieldSplit */
+.ld-textfieldsplit-container {
+  align-items: stretch;
+}
+
+.ld-textfieldsplit-selectWrap {
+  align-items: center;
+  display: inline-flex;
+  flex: none;
+  position: relative;
+}
+
+.ld-textfieldsplit-select {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--ld-semantic-color-field-text-on-fill, #2e2f32);
+  cursor: pointer;
+  font-weight: 400;
+  margin: 0;
+  outline: none;
+}
+
+.ld-textfield-disabled .ld-textfieldsplit-select {
+  color: var(--ld-semantic-color-field-text-on-fill-disabled, #babbbe);
+  cursor: default;
+}
+
+.ld-textfield-large .ld-textfieldsplit-select {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 1rem 2.25rem 1rem 1rem;
+}
+
+.ld-textfield-small .ld-textfieldsplit-select {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.625rem 2rem 0.625rem 0.75rem;
+}
+
+.ld-textfieldsplit-selectCaret {
+  color: var(--ld-semantic-color-field-text-on-fill, #2e2f32);
+  pointer-events: none;
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ld-textfield-disabled .ld-textfieldsplit-selectCaret {
+  color: var(--ld-semantic-color-field-text-on-fill-disabled, #babbbe);
+}
+
+.ld-textfieldsplit-divider {
+  background: var(--ld-semantic-color-field-border, #909196);
+  display: inline-block;
+  flex: none;
+  width: 0.0625rem;
+}
+
+.ld-textfield-large .ld-textfieldsplit-value {
+  padding: 1rem 1rem 1rem 0.75rem;
+}
+
+.ld-textfield-small .ld-textfieldsplit-value {
+  padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+}
+
+.ld-textfield-root:hover .ld-textfieldsplit-divider,
+.hover .ld-textfieldsplit-divider {
+  background: var(--ld-semantic-color-field-border-hovered, #2e2f32);
+}
+
+.ld-textfield-root:focus-within .ld-textfieldsplit-divider,
+.focus .ld-textfieldsplit-divider {
+  background: var(--ld-semantic-color-field-border-focused, #2e2f32);
+}
+
+.ld-textfield-error .ld-textfieldsplit-divider {
+  background: var(--ld-semantic-color-field-border-negative, #ea1100);
+}
+
+.ld-textfield-readOnly .ld-textfieldsplit-divider {
+  background: var(--ld-semantic-color-field-border, #909196);
+}
+
+.ld-textfield-disabled .ld-textfieldsplit-divider {
+  background: var(--ld-semantic-color-field-border-disabled, #babbbe);
+}

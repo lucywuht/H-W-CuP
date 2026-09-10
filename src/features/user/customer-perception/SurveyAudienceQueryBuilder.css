@@ -1,0 +1,4 @@
+/* Ensure the MenuSingleSelect dropdown panel is at least as wide as the trigger (216px) */
+[class*='MenuSingleSelect-module_menu'] {
+  min-width: 216px;
+}

@@ -1,0 +1,40 @@
+/* LD Portable – ActionGroup */
+.ld-wcp-actiongroup-group {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ld-wcp-actiongroup-inline {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ld-primitive-scale-space-200, 16px);
+  justify-content: flex-start;
+}
+
+.ld-wcp-actiongroup-inlineFullWidth > * {
+  flex: 1 0 0;
+}
+
+.ld-wcp-actiongroup-stacked {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--ld-primitive-scale-space-200, 16px);
+}
+
+.ld-wcp-actiongroup-stacked > * {
+  width: 100%;
+  align-self: stretch;
+}
+
+.ld-wcp-actiongroup-inlineRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ld-primitive-scale-space-200, 16px);
+  width: 100%;
+}
+
+.ld-wcp-actiongroup-inlineRow > * {
+  flex: 1 0 0;
+}

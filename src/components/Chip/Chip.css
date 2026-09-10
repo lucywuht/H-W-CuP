@@ -1,0 +1,85 @@
+/* LD Portable – Chip */
+/* Chip */
+.ld-chip-chip {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  align-items: center;
+  background: var(--ld-semantic-color-filter-fill, #ffffff);
+  border: 0;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 0 0 0.0625rem var(--ld-semantic-color-filter-border, #2e2f32);
+  box-sizing: border-box;
+  color: var(--ld-semantic-color-filter-text-onFill, #2e2f32);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+.ld-chip-chip:hover, .ld-chip-chip.hover {
+  background: var(--ld-semantic-color-filter-fill-hovered, #f1f1f2);
+  box-shadow: inset 0 0 0 0.125rem var(--ld-semantic-color-filter-border-hovered, #2e2f32);
+}
+.ld-chip-chip:focus-visible, .ld-chip-chip.focus {
+  background: var(--ld-semantic-color-filter-fill-focused, #f1f1f2);
+  box-shadow: inset 0 0 0 0.125rem var(--ld-semantic-color-filter-border-focused, #2e2f32);
+  outline: 2px solid var(--ld-semantic-color-action-focus-outline, #0053e2);
+  outline-offset: 2px;
+}
+.ld-chip-chip:active, .ld-chip-chip.active {
+  background: var(--ld-semantic-color-filter-fill-pressed, #e3e4e5);
+  box-shadow: inset 0 0 0 0.125rem var(--ld-semantic-color-filter-border-pressed, #2e2f32);
+}
+.ld-chip-chip:disabled {
+  background: var(--ld-semantic-color-filter-fill-disabled, #ffffff);
+  box-shadow: inset 0 0 0 0.0625rem var(--ld-semantic-color-filter-border-disabled, #babbbe);
+  color: var(--ld-semantic-color-filter-text-onFill-disabled, #babbbe);
+  cursor: default;
+}
+
+/* Selected state — uses activated filter tokens (filled blue treatment) */
+.ld-chip-selected {
+  background: var(--ld-semantic-color-filter-fill-activated, #e8f0ff);
+  box-shadow: inset 0 0 0 0.125rem var(--ld-semantic-color-filter-border-activated, #0053e2);
+  color: var(--ld-semantic-color-filter-text-onFill, #2e2f32);
+}
+.ld-chip-selected:hover, .ld-chip-selected.hover {
+  background: var(--ld-semantic-color-filter-fill-activated-hovered, #d1e0ff);
+  box-shadow: inset 0 0 0 0.125rem var(--ld-semantic-color-filter-border-activated-hovered, #0053e2);
+}
+.ld-chip-selected:focus-visible, .ld-chip-selected.focus {
+  background: var(--ld-semantic-color-filter-fill-activated-focused, #e9f1fe);
+  box-shadow: inset 0 0 0 0.125rem var(--ld-semantic-color-filter-border-activated-focused, #0053e2);
+}
+.ld-chip-selected:active, .ld-chip-selected.active {
+  background: var(--ld-semantic-color-filter-fill-activated-pressed, #bfd0ff);
+  box-shadow: inset 0 0 0 0.125rem var(--ld-semantic-color-filter-border-activated-pressed, #002185);
+}
+.ld-chip-selected:disabled {
+  background: var(--ld-semantic-color-filter-fill-disabled, #ffffff);
+  box-shadow: inset 0 0 0 0.125rem var(--ld-semantic-color-filter-border-activated-disabled, #babbbe);
+  color: var(--ld-semantic-color-filter-text-onFill-disabled, #babbbe);
+}
+
+.ld-chip-small {
+  height: 2rem;
+}
+
+.ld-chip-large {
+  height: 2.5rem;
+}
+
+.ld-chip-leading {
+  margin-right: 0.5rem;
+}
+
+.ld-chip-trailing {
+  margin-left: 0.5rem;
+}
+
+/* ChipGroup */
+.ld-chip-chipgroup-chipGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

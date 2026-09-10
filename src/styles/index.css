@@ -1,0 +1,359 @@
+@import '../living-design.css';
+
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+/*
+ * Set --ld-primitive-font-family-sans at :root so it is available on the
+ * first paint, before useInitializeTheming's useEffect fires and sets the
+ * data-ld-theme attribute.
+ *
+ * The generated walmart-b2b.css does NOT define this variable (unlike
+ * walmart-legacy.css which sets it to 'Bogle'). Without a :root definition,
+ * components that use var(--ld-primitive-font-family-sans) without a CSS
+ * fallback (e.g. PageHeader from @walmart-dataventures/shared-components)
+ * would silently inherit whatever the browser resolves — which can appear as
+ * Bogle if another loaded font face wins.
+ *
+ * Theme-specific selectors with higher specificity ([data-ld-theme="…"])
+ * still override this as intended (e.g. Bogle for Walmart Legacy).
+ */
+:root {
+  --ld-primitive-font-family-sans:
+    'Everyday Sans UI', -apple-system, Roboto, sans-serif;
+}
+
+/* Explicit B2B override so it also wins after the attribute is set. */
+
+#contractYearMenuList {
+  width: 240px !important;
+  min-width: 240px !important;
+  max-width: 240px !important;
+}
+
+#purchaseOrderMenuList {
+  width: 304px !important;
+  min-width: 304px !important;
+  max-width: 304px !important;
+}
+
+[data-ld-theme='Walmart B2B'] {
+  --ld-primitive-font-family-sans:
+    'Everyday Sans UI', -apple-system, Roboto, sans-serif;
+}
+
+/*
+ * Apply the Living Design font to the entire page.
+ * The --ld-primitive-font-family-sans variable is set above for Walmart B2B
+ * and is defined in theme CSS for other brands (Gibson, Bogle, etc.).
+ * Without this rule, page-level text falls back to the browser default (serif).
+ */
+body {
+  font-family: var(
+    --ld-primitive-font-family-sans,
+    'Everyday Sans UI',
+    -apple-system,
+    Roboto,
+    sans-serif
+  );
+  color: var(--ld-semantic-color-text, #2e2f32);
+  margin: 0;
+}
+
+/*
+ * Container max-width: match walmart.com responsive approach.
+ * Living Design's Container is 100% width by default — without this,
+ * content stretches edge-to-edge with no margins.
+ * calc(100% - 48px) gives 24px margin on each side, matching Walmart's pattern.
+ */
+.ld-container-container {
+  max-width: calc(100% - 48px);
+}
+
+/*
+ * Grid row-gap: prevent cards from stacking without vertical spacing.
+ * Living Design's Grid uses display:flex with flex-wrap but has NO row-gap,
+ * so when GridColumns wrap to a new row, items stack with zero spacing.
+ */
+.ld-grid-grid {
+  row-gap: 1rem;
+}
+
+.budget-cost-center-name-btn {
+  text-decoration: none;
+}
+
+.budget-cost-center-name-btn:hover {
+  text-decoration: underline;
+}
+
+.budget-allocation-table-wrapper [class*='DvTable-module_tableContainer'] {
+  border: none;
+  border-radius: 0;
+}
+
+.budget-activity-table-wrapper [class*='DvTable-module_tableContainer'] {
+  border: none;
+  border-radius: 0;
+}
+
+.budget-activity-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-radius: 0 !important;
+}
+
+.budget-activity-toolbar-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.budget-activity-filter {
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.budget-activity-filter [class*='MenuSingleSelect-module_menuContainer'] {
+  width: auto;
+}
+
+.budget-activity-filter [class*='MenuSingleSelect-module_trigger'] {
+  width: auto;
+}
+
+.user-management-table-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-radius: 0 !important;
+}
+
+.user-management-table-search {
+  width: 484px;
+  max-width: 484px;
+}
+
+.user-management-table-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px !important;
+  justify-content: flex-start !important;
+}
+
+.user-management-table-filter {
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+  margin: 0 !important;
+}
+
+.user-management-table-filter [class*='MenuSingleSelect-module_menuContainer'] {
+  width: auto;
+}
+
+.user-management-table-filter [class*='MenuSingleSelect-module_trigger'] {
+  width: auto;
+}
+
+.user-management-table-wrapper [class*='DvTable-module_tableContainer'] {
+  border: none;
+  border-radius: 0;
+}
+
+.user-management-table-wrapper [class*='TableCell-module_tagContainer'],
+.user-management-table-wrapper [class*='TableCell-module_tagsList'] {
+  overflow: visible;
+}
+
+.survey-activity-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  border-radius: 0 !important;
+}
+
+.survey-activity-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-direction: row;
+}
+
+.survey-activity-filters > * {
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.user-customer-perception-table-wrapper
+  [class*='DvTable-module_tableContainer'] {
+  border: none;
+  border-radius: 0;
+}
+
+.researcher-companies-name-btn {
+  text-decoration: none;
+}
+
+.researcher-companies-name-btn:hover {
+  text-decoration: underline;
+}
+
+.researcher-companies-table-wrapper [class*='DvTable-module_tableContainer'] {
+  border: none;
+  border-radius: 0;
+}
+
+.budget-detail-po-table-wrapper [class*='DvTable-module_tableContainer'] {
+  border: none;
+  border-radius: 0;
+}
+
+.budget-detail-assigned-users-table-wrapper
+  [class*='DvTable-module_tableContainer'] {
+  border: none;
+  border-radius: 0;
+}
+
+.budget-detail-survey-activity-table-wrapper
+  [class*='DvTable-module_tableContainer'] {
+  border: none;
+  border-radius: 0;
+}
+
+.budget-detail-survey-activity-table-wrapper table {
+  min-width: 1680px;
+}
+
+.budget-detail-survey-filter {
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.budget-detail-survey-filter [class*='MenuSingleSelect-module_menuContainer'] {
+  width: auto;
+}
+
+.budget-detail-survey-filter [class*='MenuSingleSelect-module_trigger'] {
+  width: auto;
+}
+
+.researcher-companies-table-filter {
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.researcher-companies-table-filter
+  [class*='MenuSingleSelect-module_menuContainer'] {
+  width: auto;
+}
+
+.researcher-companies-table-filter [class*='MenuSingleSelect-module_trigger'] {
+  width: auto;
+}
+
+.survey-billing-table-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+  border-radius: 0 !important;
+  width: 100%;
+  min-height: 64px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.survey-billing-table-search {
+  width: 360px;
+  min-width: 360px;
+  max-width: 360px;
+  flex-shrink: 0;
+}
+
+.survey-billing-table-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: var(--ld-primitive-scale-space-100, 8px);
+}
+
+.survey-billing-table-filters > * {
+  margin: 0;
+}
+
+.survey-billing-table-filter {
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.survey-billing-table-filter [class*='MenuSingleSelect-module_menuContainer'] {
+  width: auto;
+}
+
+.survey-billing-table-wrapper [class*='DvTable-module_tableContainer'] {
+  border: none;
+  border-radius: 0;
+}
+
+.survey-billing-table-wrapper [class*='DvTable-module'] th:first-child {
+  padding: 0 !important;
+}
+
+.survey-billing-table-filter [class*='MenuSingleSelect-module_trigger'] {
+  width: auto;
+}
+
+.survey-billing-toolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--ld-primitive-scale-space-100, 8px);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.survey-billing-modal-select,
+.survey-billing-modal-select > div {
+  width: 100%;
+  min-width: 0;
+}
+
+.survey-billing-modal-select button {
+  width: 100%;
+  min-width: 0;
+}
+
+.survey-billing-modal-select button p {
+  min-width: 0;
+}
+
+#survey-billing-purchase-order-menu {
+  width: 320px;
+  min-width: 320px;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+/* Force visible box-shadow border on readonly DV TextArea in billing modal.
+   The DV TextArea sets box-shadow: transparent in readonly state — override it
+   by targeting the container div that directly wraps the readonly textarea. */
+.survey-billing-modal div:has(> textarea[readonly]) {
+  box-shadow: inset 0 0 0 0.0625rem #909196 !important;
+}

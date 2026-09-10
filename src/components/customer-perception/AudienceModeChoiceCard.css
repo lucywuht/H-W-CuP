@@ -1,0 +1,35 @@
+.cp-audience-mode-choice-card {
+  width: 100%;
+}
+
+.cp-audience-mode-choice-card__body {
+  min-height: 106px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  text-align: center;
+}
+
+.cp-audience-mode-choice-card__illustration {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.cp-audience-mode-choice-card__title {
+  color: var(--ld-semantic-color-text, #2e2f32);
+  font-size: var(--ld-semantic-font-body-small-size, 14px);
+  line-height: var(--ld-semantic-font-body-small-lineheight, 20px);
+  font-weight: var(--ld-semantic-font-body-small-weight-alt, 700);
+}
+
+.cp-audience-mode-choice-card__description {
+  color: var(--ld-semantic-color-text-subtlest, #74767c);
+  font-size: var(--ld-semantic-font-caption-size, 12px);
+  line-height: var(--ld-semantic-font-caption-lineheight, 16px);
+}

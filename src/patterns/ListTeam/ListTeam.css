@@ -1,0 +1,80 @@
+.ax-list-team {
+  display: flex;
+  align-items: center;
+  gap: var(--ld-primitive-scale-space-200, 16px);
+  width: 100%;
+  min-height: 80px;
+  padding: var(--ld-primitive-scale-space-200, 16px);
+  border: 1px solid var(--ld-semantic-color-separator, #e3e4e5);
+  border-radius: var(--ld-primitive-shape-radius-200, 8px);
+  background: var(--ld-semantic-color-surface, #ffffff);
+  color: var(--ld-semantic-color-text, #2e2f32);
+  box-sizing: border-box;
+}
+
+.ax-list-team[role='button'] {
+  cursor: pointer;
+}
+
+.ax-list-team[role='button']:hover,
+.ax-list-team--pressed {
+  background: var(--ld-semantic-color-fill-subtle, #f8f8f8);
+}
+
+.ax-list-team--selected {
+  border-color: var(--ld-semantic-color-border-brand, #0071dc);
+  box-shadow: inset 0 0 0 1px var(--ld-semantic-color-border-brand, #0071dc);
+}
+
+.ax-list-team__illustration {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.ax-list-team__content {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: var(--ld-primitive-scale-space-50, 4px);
+}
+
+.ax-list-team__text-group {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.ax-list-team__title {
+  overflow: hidden;
+  color: var(--ld-semantic-color-text, #2e2f32);
+  font-size: var(--ld-semantic-font-body-medium-size, 16px);
+  font-weight: var(--ld-semantic-font-body-medium-weight-alt, 700);
+  line-height: var(--ld-semantic-font-body-medium-lineheight, 24px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ax-list-team__subtitle {
+  overflow: hidden;
+  color: var(--ld-semantic-color-text-subtle, #74767c);
+  font-size: var(--ld-semantic-font-body-small-size, 14px);
+  line-height: var(--ld-semantic-font-body-small-lineheight, 20px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ax-list-team__trailing {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ld-primitive-scale-space-100, 8px);
+}
+
+.ax-list-team__chevron {
+  display: inline-flex;
+  color: var(--ld-semantic-color-text-subtle, #74767c);
+}

@@ -1,0 +1,75 @@
+.ax-attribute {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.ax-attribute--small {
+  gap: var(--ld-primitive-scale-space-50, 4px);
+}
+
+.ax-attribute--large {
+  gap: var(--ld-primitive-scale-space-100, 8px);
+}
+
+.ax-attribute__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ax-attribute__label {
+  font-family: var(--ld-semantic-font-family-sans, 'Everyday Sans UI', sans-serif);
+  line-height: 1;
+}
+
+.ax-attribute__label--small {
+  font-size: var(--ld-semantic-font-body-small-size, 14px);
+  font-weight: var(--ld-semantic-font-body-small-weight-default, 400);
+  line-height: var(--ld-semantic-font-body-small-lineheight, 1.43);
+}
+
+.ax-attribute__label--large {
+  font-size: var(--ld-semantic-font-body-medium-size, 16px);
+  font-weight: var(--ld-semantic-font-body-medium-weight-default, 400);
+  line-height: var(--ld-semantic-font-body-medium-lineheight, 1.5);
+}
+
+.ax-attribute__additional-container {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ld-primitive-scale-space-50, 4px);
+}
+
+.ax-attribute__additional-icon {
+  flex-shrink: 0;
+}
+
+.ax-attribute--color-default .ax-attribute__icon,
+.ax-attribute--color-default .ax-attribute__label {
+  color: var(--ld-semantic-color-text, #2E2F32);
+}
+
+.ax-attribute--color-brand .ax-attribute__icon,
+.ax-attribute--color-brand .ax-attribute__label {
+  color: var(--ld-semantic-color-text-brand, #0053E2);
+}
+
+.ax-attribute--color-negative .ax-attribute__icon,
+.ax-attribute--color-negative .ax-attribute__label {
+  color: var(--ld-semantic-color-text-critical, #C00000);
+}
+
+.ax-attribute--color-inverse .ax-attribute__icon,
+.ax-attribute--color-inverse .ax-attribute__label {
+  color: var(--ld-semantic-color-text-inverse, #ffffff);
+}
+
+.ax-attribute--color-highlight .ax-attribute__icon,
+.ax-attribute--color-highlight .ax-attribute__label {
+  color: var(--ld-semantic-color-text-brand, #0053E2);
+}
+.ax-attribute--color-highlight .ax-attribute__label {
+  font-weight: 700;
+}

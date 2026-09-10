@@ -1,0 +1,159 @@
+.choose-brands-modal__overlay [class*='ModalPortal-module_modal'] {
+  width: min(760px, calc(100vw - 32px));
+  max-width: 760px;
+  max-height: 800px;
+}
+
+.choose-brands-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 0 24px;
+}
+
+.choose-brands-modal__radioStack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  margin-top: 0;
+}
+
+.choose-brands-modal__radioRow {
+  display: inline-flex;
+  align-items: center;
+}
+
+.choose-brands-modal__tableShell {
+  border: 1px solid var(--ld-semantic-color-separator, #e3e4e5);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--ld-semantic-color-surface, #ffffff);
+}
+
+.choose-brands-modal__search {
+  width: 360px;
+  min-width: 360px;
+  max-width: 360px;
+  flex-shrink: 0;
+}
+
+.choose-brands-modal__sortableHeader {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  padding: 0;
+  text-align: left;
+}
+
+.choose-brands-modal__sortableHeader:focus-visible {
+  outline: 2px solid var(--ld-semantic-color-border-brand, #0053e2);
+  outline-offset: 2px;
+}
+
+.choose-brands-modal__sortIcon {
+  transform: translateY(1px);
+}
+
+.choose-brands-modal__sortIcon--asc {
+  transform: rotate(180deg) translateY(-1px);
+}
+
+.choose-brands-modal__tableViewport {
+  overflow-x: hidden;
+}
+
+.choose-brands-modal__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.choose-brands-modal__table thead th {
+  background: var(--ld-semantic-color-surface-subtle, #f8f8f8);
+  color: var(--ld-semantic-color-text, #2e2f32);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--ld-semantic-color-separator, #e3e4e5);
+}
+
+.choose-brands-modal__table tbody td {
+  color: var(--ld-semantic-color-text, #2e2f32);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--ld-semantic-color-separator, #e3e4e5);
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.choose-brands-modal__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.choose-brands-modal__checkboxColumnHeader,
+.choose-brands-modal__checkboxColumnCell {
+  width: 52px;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.choose-brands-modal__countHeader,
+.choose-brands-modal__countCell {
+  width: 132px;
+  text-align: left;
+}
+
+.choose-brands-modal__nameCell {
+  font-weight: 600;
+}
+
+.choose-brands-modal__pagination {
+  border-top: 1px solid var(--ld-semantic-color-separator, #e3e4e5);
+  padding: 16px;
+}
+
+.choose-brands-modal__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.choose-brands-modal__actionsLeft,
+.choose-brands-modal__actionsRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.choose-brands-modal__emptyState {
+  padding: 24px 16px !important;
+  text-align: center;
+  color: var(--ld-semantic-color-text-subtle, #515357) !important;
+}
+
+.choose-brands-modal__srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

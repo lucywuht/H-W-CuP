@@ -1,0 +1,40 @@
+/* Living Design – ButtonGroupPatterns */
+.ld-buttongroup-patterns {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ld-buttongroup-patterns-inline {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ld-primitive-scale-space-200, 16px);
+  justify-content: flex-start;
+}
+
+.ld-buttongroup-patterns-inlineFullWidth > * {
+  flex: 1 0 0;
+}
+
+.ld-buttongroup-patterns-stacked {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--ld-primitive-scale-space-200, 16px);
+}
+
+.ld-buttongroup-patterns-stacked > * {
+  width: 100%;
+  align-self: stretch;
+}
+
+.ld-buttongroup-patterns-inlineRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ld-primitive-scale-space-200, 16px);
+  width: 100%;
+}
+
+.ld-buttongroup-patterns-inlineRow > * {
+  flex: 1 0 0;
+}

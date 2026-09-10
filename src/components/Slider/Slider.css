@@ -1,0 +1,163 @@
+/* LD Portable -- Slider (PX Component Library v2.2) */
+
+.ld-slider {
+  --ld-slider-track-height: 8px;
+  --ld-slider-thumb-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--ld-primitive-scale-space-100, 8px);
+  width: 100%;
+  touch-action: none;
+  user-select: none;
+}
+
+.ld-slider--small {
+  --ld-slider-track-height: 6px;
+  --ld-slider-thumb-size: 16px;
+  gap: var(--ld-primitive-scale-space-50, 4px);
+}
+
+/* ---- Header (label + value) ---- */
+.ld-slider-header,
+.ld-slider-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--ld-primitive-scale-space-200, 16px);
+}
+
+.ld-slider-label,
+.ld-slider-value {
+  color: var(--ld-semantic-color-text, #2e2f32);
+  font-family: var(--ld-semantic-font-body-small-family, 'Everyday Sans UI'), sans-serif;
+  font-size: var(--ld-semantic-font-body-small-size, 14px);
+  line-height: var(--ld-semantic-font-body-small-lineheight, 20px);
+  font-weight: var(--ld-semantic-font-body-small-weight-alt, 700);
+}
+
+.ld-slider--small .ld-slider-label,
+.ld-slider--small .ld-slider-value {
+  font-size: var(--ld-semantic-font-caption-size, 12px);
+  line-height: var(--ld-semantic-font-caption-lineheight, 16px);
+  font-weight: var(--ld-semantic-font-caption-weight-alt, 700);
+}
+
+.ld-slider-value {
+  text-align: right;
+}
+
+/* ---- Footer (min / max captions) ---- */
+.ld-slider-min,
+.ld-slider-max {
+  color: var(--ld-semantic-color-text-subtle, #515357);
+  font-family: var(--ld-semantic-font-caption-family, 'Everyday Sans UI'), sans-serif;
+  font-size: var(--ld-semantic-font-caption-size, 12px);
+  line-height: var(--ld-semantic-font-caption-lineheight, 16px);
+  font-weight: var(--ld-semantic-font-caption-weight-default, 400);
+}
+
+.ld-slider-max {
+  text-align: right;
+}
+
+/* ---- Interactive control (track + thumbs) ---- */
+.ld-slider-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* Reserve room so thumbs at 0% / 100% are not clipped. */
+  padding-block: calc(var(--ld-slider-thumb-size) / 2);
+  margin-block: calc(var(--ld-slider-thumb-size) / -4);
+}
+
+/* Track */
+.ld-slider-track {
+  position: relative;
+  height: var(--ld-slider-track-height);
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  border-radius: 9999px;
+  cursor: pointer;
+  background-color: var(--ld-semantic-color-progress-fill-subtle, #e3e4e5);
+}
+
+.ld-slider--disabled .ld-slider-track {
+  cursor: not-allowed;
+}
+
+/* Active (filled) portion of the track */
+.ld-slider-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: var(--ld-semantic-color-fill-activated, #0053e2);
+  border-radius: 9999px;
+}
+
+.ld-slider--disabled .ld-slider-fill {
+  background-color: var(--ld-semantic-color-fill-activated-disabled, #babbbe);
+}
+
+/* Thumb */
+.ld-slider-thumb {
+  position: absolute;
+  display: block;
+  width: var(--ld-slider-thumb-size);
+  height: var(--ld-slider-thumb-size);
+  border-radius: 9999px;
+  background-color: var(--ld-semantic-color-fill-activated, #0053e2);
+  box-shadow:
+    0 1px 2px 1px rgba(0, 0, 0, 0.15),
+    0 -1px 2px 0 rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.ld-slider-thumb:active {
+  cursor: grabbing;
+}
+
+.ld-slider-thumb:focus-visible {
+  outline: 2px solid var(--ld-semantic-color-action-focus-outline, #0053e2);
+  outline-offset: 2px;
+}
+
+.ld-slider-thumb:hover {
+  box-shadow:
+    0 1px 2px 1px rgba(0, 0, 0, 0.15),
+    0 -1px 2px 0 rgba(0, 0, 0, 0.1),
+    0 0 0 6px var(--ld-semantic-color-action-fill-primary-subtle, rgba(0, 83, 226, 0.15));
+}
+
+/* ---- Disabled ---- */
+.ld-slider--disabled {
+  pointer-events: none;
+}
+
+.ld-slider--disabled .ld-slider-label,
+.ld-slider--disabled .ld-slider-value,
+.ld-slider--disabled .ld-slider-min,
+.ld-slider--disabled .ld-slider-max {
+  color: var(--ld-semantic-color-text-disabled, #babbbe);
+}
+
+.ld-slider--disabled .ld-slider-thumb {
+  background-color: var(--ld-semantic-color-fill-activated-disabled, #babbbe);
+  cursor: not-allowed;
+}
+
+.ld-slider--disabled .ld-slider-thumb:hover {
+  box-shadow:
+    0 1px 2px 1px rgba(0, 0, 0, 0.15),
+    0 -1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-slider-thumb {
+    transition: none !important;
+  }
+}

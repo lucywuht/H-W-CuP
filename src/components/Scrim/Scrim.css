@@ -1,0 +1,17 @@
+.px-scrim {}
+
+.px-scrim--inverse {}
+
+.px-scrim--open {
+  opacity: 1;
+}
+
+.px-scrim--closing {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .px-scrim {
+    transition: none;
+  }
+}

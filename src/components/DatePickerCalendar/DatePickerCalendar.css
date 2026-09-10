@@ -1,0 +1,203 @@
+.ax-date-picker-calendar {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--ld-primitive-scale-space-200, 16px);
+  padding: var(--ld-primitive-scale-space-200, 16px);
+  font-family: var(--ld-semantic-font-family-sans, 'Everyday Sans UI');
+  border-radius: var(--ld-primitive-scale-border-radius-100, 8px);
+  box-shadow: var(--ld-semantic-elevation-100);
+  background: var(--ld-semantic-color-surface, #fff);
+  width: fit-content;
+}
+
+.ax-date-picker-calendar--embedded {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.ax-date-picker-calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--ld-primitive-scale-space-150, 12px);
+  position: relative;
+}
+
+.ax-date-picker-calendar__month-year {
+  font-family: var(--ld-semantic-font-family-sans, 'Everyday Sans UI');
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--ld-semantic-color-text, #2e2f32);
+  flex: 1;
+  text-align: center;
+}
+
+.ax-date-picker-calendar__nav {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--ld-primitive-scale-border-radius-50, 4px);
+  color: var(--ld-semantic-color-text, #2e2f32);
+  transition: background-color 0.15s ease;
+}
+
+.ax-date-picker-calendar__nav:hover:not(:disabled) {
+  background-color: var(--ld-semantic-color-fill-subtle, #f5f5f6);
+}
+
+.ax-date-picker-calendar__nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.ax-date-picker-calendar__nav--prev {
+  left: 0;
+}
+
+.ax-date-picker-calendar__nav--next {
+  right: 0;
+}
+
+.ax-date-picker-calendar__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ld-primitive-scale-space-50, 4px);
+}
+
+.ax-date-picker-calendar__day-headers {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  gap: var(--ld-primitive-scale-space-50, 4px);
+  margin-bottom: var(--ld-primitive-scale-space-100, 8px);
+}
+
+.ax-date-picker-calendar__day-headers--with-weeks {
+  grid-template-columns: 40px repeat(7, 40px);
+}
+
+.ax-date-picker-calendar__day-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--ld-semantic-color-text, #2e2f32);
+}
+
+.ax-date-picker-calendar__day-header--week-number {
+  font-size: 10px;
+  text-align: center;
+}
+
+.ax-date-picker-calendar__weeks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ld-primitive-scale-space-50, 4px);
+}
+
+.ax-date-picker-calendar__week {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  gap: var(--ld-primitive-scale-space-50, 4px);
+}
+
+.ax-date-picker-calendar__week--with-weeks {
+  grid-template-columns: 40px repeat(7, 40px);
+}
+
+.ax-date-picker-calendar__week-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--ld-semantic-color-text-subtle, #515357);
+}
+
+.ax-date-picker-calendar__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--ld-semantic-color-text, #2e2f32);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background: transparent;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.ax-date-picker-calendar__day:hover:not(.ax-date-picker-calendar__day--disabled):not(.ax-date-picker-calendar__day--selected) {
+  background-color: var(--ld-semantic-color-fill-subtle, #f5f5f6);
+}
+
+.ax-date-picker-calendar__day--disabled {
+  color: var(--ld-semantic-color-text-disabled, #babbbe);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ax-date-picker-calendar__day--outside {
+  color: var(--ld-semantic-color-text-disabled, #babbbe);
+  opacity: 0.5;
+}
+
+.ax-date-picker-calendar__day--selected {
+  border-color: var(--ld-semantic-color-action-fill-primary, #0071dc);
+  background-color: transparent;
+  color: var(--ld-semantic-color-text, #2e2f32);
+  font-weight: 400;
+}
+
+.ax-date-picker-calendar__day--today {
+  font-weight: 700;
+}
+
+.ax-date-picker-calendar__day--range-start {
+  border-color: var(--ld-semantic-color-action-fill-primary, #0071dc);
+  background-color: transparent;
+  color: var(--ld-semantic-color-text, #2e2f32);
+}
+
+.ax-date-picker-calendar__day--range-end {
+  background-color: var(--ld-semantic-color-action-fill-primary, #0071dc);
+  color: var(--ld-primitive-color-white, #fff);
+  border-color: var(--ld-semantic-color-action-fill-primary, #0071dc);
+}
+
+.ax-date-picker-calendar__day--range-end:hover:not(.ax-date-picker-calendar__day--disabled) {
+  background-color: var(--ld-semantic-color-action-fill-primary-hovered, #0060b8);
+}
+
+.ax-date-picker-calendar__day--in-range {
+  background-color: var(--ld-semantic-color-action-fill-subtle, #e5f0ff);
+  border-radius: 50%;
+  color: var(--ld-semantic-color-text, #2e2f32);
+  border-color: transparent;
+}
+
+.ax-date-picker-calendar__day--in-range:hover:not(.ax-date-picker-calendar__day--disabled) {
+  background-color: var(--ld-semantic-color-action-fill-subtle-hovered, #cce0ff);
+}

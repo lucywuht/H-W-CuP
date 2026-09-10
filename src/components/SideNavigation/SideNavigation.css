@@ -1,0 +1,192 @@
+/* LD Portable – SideNavigation */
+/* SideNavigation */
+.ld-sidenavigation-sideNavigation {
+  width: 100%;
+}
+
+.ld-sidenavigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* SideNavigationItem */
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  background: var(--ld-semantic-color-page-nav-fill);
+  color: var(--ld-semantic-color-page-nav-text-on-fill);
+  cursor: pointer;
+  display: flex;
+  padding: 0.5rem 1rem 0.5rem 1.5rem;
+  position: relative;
+  text-decoration: none;
+}
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem:hover, .ld-sidenavigation-sidenavigationitem-sideNavigationItem.hover {
+  background: var(--ld-semantic-color-page-nav-fill-hovered);
+}
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem:focus, .ld-sidenavigation-sidenavigationitem-sideNavigationItem.focus {
+  background: var(--ld-semantic-color-page-nav-fill-hovered);
+}
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem:active, .ld-sidenavigation-sidenavigationitem-sideNavigationItem.active {
+  background: var(--ld-semantic-color-page-nav-fill-pressed);
+}
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem::before {
+  background: var(--ld-semantic-color-page-nav-indicator-activated);
+  border-radius: 0 62.5rem 62.5rem 0;
+  bottom: 0.25rem;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0.25rem;
+  width: 0.25rem;
+}
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem.ld-sidenavigation-sidenavigationitem-isCurrent {
+  background: var(--ld-semantic-color-page-nav-fill-activated);
+}
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem.ld-sidenavigation-sidenavigationitem-isCurrent:hover, .ld-sidenavigation-sidenavigationitem-sideNavigationItem.ld-sidenavigation-sidenavigationitem-isCurrent.hover {
+  background: var(--ld-semantic-color-page-nav-fill-activated-hovered);
+}
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem.ld-sidenavigation-sidenavigationitem-isCurrent:focus, .ld-sidenavigation-sidenavigationitem-sideNavigationItem.ld-sidenavigation-sidenavigationitem-isCurrent.focus {
+  background: var(--ld-semantic-color-page-nav-fill-activated-hovered);
+}
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem.ld-sidenavigation-sidenavigationitem-isCurrent:active, .ld-sidenavigation-sidenavigationitem-sideNavigationItem.ld-sidenavigation-sidenavigationitem-isCurrent.active {
+  background: var(--ld-semantic-color-page-nav-fill-activated-pressed);
+}
+.ld-sidenavigation-sidenavigationitem-sideNavigationItem.ld-sidenavigation-sidenavigationitem-isCurrent::before {
+  opacity: 1;
+}
+
+.ld-sidenavigation-sidenavigationitem-leading {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* LD Portable – Tree
+   Uses the same pageNav design tokens as SideNavigationItem so the tree
+   visually matches the Side Navigation component from LD 3.5.            */
+
+.ld-tree {
+}
+
+.ld-tree-label {
+  color: var(--ld-semantic-color-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.ld-tree-root,
+.ld-tree-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ld-tree-node {
+  align-items: center;
+  background: var(--ld-semantic-color-page-nav-fill);
+  color: var(--ld-semantic-color-page-nav-text-on-fill);
+  cursor: pointer;
+  display: flex;
+  font-size: 0.875rem;
+  gap: 0.25rem;
+  line-height: 1.25rem;
+  min-height: 2.5rem;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  text-decoration: none;
+  transition: background-color 0.1s ease;
+  user-select: none;
+}
+
+.ld-tree-node::before {
+  background: var(--ld-semantic-color-page-nav-indicator-activated);
+  border-radius: 0 62.5rem 62.5rem 0;
+  bottom: 0.25rem;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0.25rem;
+  width: 0.25rem;
+}
+
+.ld-tree-node:hover,
+.ld-tree-node.hover {
+  background: var(--ld-semantic-color-page-nav-fill-hovered);
+}
+
+.ld-tree-node:active,
+.ld-tree-node.active {
+  background: var(--ld-semantic-color-page-nav-fill-pressed);
+}
+
+.ld-tree-node:focus-visible {
+  outline: 0.125rem solid var(--ld-semantic-color-action-focus-outline);
+  outline-offset: -0.125rem;
+}
+
+.ld-tree-node--selected {
+  background: var(--ld-semantic-color-page-nav-fill-activated);
+  color: var(--ld-semantic-color-page-nav-text-on-fill-activated);
+  font-weight: 600;
+}
+
+.ld-tree-node--selected::before {
+  opacity: 1;
+}
+
+.ld-tree-node--selected .ld-tree-node-chevron {
+  color: var(--ld-semantic-color-page-nav-text-on-fill-activated);
+}
+
+.ld-tree-node--selected:hover,
+.ld-tree-node--selected.hover {
+  background: var(--ld-semantic-color-page-nav-fill-activated-hovered);
+}
+
+.ld-tree-node--selected:active,
+.ld-tree-node--selected.active {
+  background: var(--ld-semantic-color-page-nav-fill-activated-pressed);
+}
+
+.ld-tree-node-toggle {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: 1rem;
+  justify-content: center;
+  width: 1rem;
+}
+
+.ld-tree-node-chevron {
+  color: var(--ld-semantic-color-page-nav-text-on-fill);
+  transition: transform 0.15s ease;
+}
+
+.ld-tree-node-chevron--expanded {
+  transform: rotate(90deg);
+}
+
+.ld-tree-node-spacer {
+  display: block;
+  width: 1rem;
+}
+
+.ld-tree-node-label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-tree-node,
+  .ld-tree-node-chevron {
+    transition: none;
+  }
+}

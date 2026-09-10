@@ -1,0 +1,110 @@
+.ax-schedule-widget {
+  background-color: var(--ld-semantic-color-surface, #fff);
+  display: flex;
+  flex-direction: column;
+}
+
+.ax-schedule-widget__header {
+  padding: 16px 16px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ax-schedule-widget__header-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.ax-schedule-widget__title {}
+
+.ax-schedule-widget__subtitle {}
+
+.ax-schedule-widget__shift-list {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ax-schedule-widget__shift-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ax-schedule-widget__shift-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.ax-schedule-widget__shift-row:hover {}
+
+.ax-schedule-widget__shift-row:active {}
+
+.ax-schedule-widget__shift-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.ax-schedule-widget__shift-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ax-schedule-widget__shift-date {}
+
+.ax-schedule-widget__shift-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ax-schedule-widget__shift-detail {}
+
+.ax-schedule-widget__chevron {
+  display: flex;
+  align-items: center;
+  color: var(--ld-semantic-color-text-subtle, #767676);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ax-schedule-widget__report-row {
+  padding: 0 16px 12px;
+}
+
+.ax-schedule-widget__shift-divider {
+  height: 1px;
+  background-color: var(--ld-semantic-color-separator, #e3e4e5);
+  margin: 0 16px;
+}
+
+.ax-schedule-widget__promo-card {
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--ld-semantic-color-background-subtle, #f5f5f5);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+.ax-schedule-widget__promo-title {}
+
+.ax-schedule-widget__promo-text {}
