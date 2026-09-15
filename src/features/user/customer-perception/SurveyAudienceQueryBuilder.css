@@ -2,3 +2,21 @@
 [class*='MenuSingleSelect-module_menu'] {
   min-width: 216px;
 }
+
+/* Panelist upload: collapse the empty file preview reservation so it takes no space when no files are selected */
+.panelist-upload-wrapper [class*='FileUpload-module_filePreviewsContainer'] {
+  height: auto;
+  min-height: 0;
+}
+
+/* Panelist upload: stretch the dropzone wrapper to fill the container width, no bottom padding */
+.panelist-upload-wrapper [class*='FileUpload-module_dropzoneWrapper'] {
+  width: 100%;
+  align-items: stretch;
+  padding-bottom: 0;
+}
+
+/* Panelist upload: remove bottom margin from file preview container so wrapper has no trailing space */
+.panelist-upload-wrapper [class*='FileUpload-module_filePreviewsContainer'] {
+  margin-bottom: 0;
+}

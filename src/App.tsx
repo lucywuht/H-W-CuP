@@ -57,18 +57,18 @@ function LandingPage({ onNavigate }: { onNavigate: (page: AppPage) => void }) {
             height: 160,
             padding: 24,
             background: '#fff',
-            border: '2px solid #0053e2',
+            border: '2px solid #e3e4e5',
             borderRadius: 12,
             cursor: 'pointer',
             fontSize: 18,
             fontWeight: 700,
-            color: '#0053e2',
+            color: '#2e2f32',
             fontFamily: 'inherit',
             transition: 'background 0.15s, box-shadow 0.15s',
-            boxShadow: '0 2px 8px rgba(0,83,226,0.08)',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
           }}
           onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.background = '#eef3ff';
+            (e.currentTarget as HTMLButtonElement).style.background = '#f8f8f8';
           }}
           onMouseLeave={(e) => {
             (e.currentTarget as HTMLButtonElement).style.background = '#fff';
@@ -188,6 +188,7 @@ export default function App() {
             <SurveyAudienceBuilderPage
               projectName="H&W CuP Survey"
               onBack={() => setPage('landing')}
+              isPhase1
             />
           </div>
         )}

@@ -5,11 +5,13 @@ import {
   IconButton as LDIconButton,
   LDIcon,
   Button as LDButton,
+  FileUpload,
   MenuAction,
   MenuSingleSelect,
   Modal,
   Select as LDSelect,
 } from '@walmart-dataventures/shared-components';
+import type { FileRejection, FileWithPath } from 'react-dropzone';
 import { Radio } from '../../../components/Radio';
 import { LinkButton } from '../../../components/LinkButton';
 import { ChooseWalmartStoresModal } from './ChooseWalmartStoresModal';
@@ -577,6 +579,7 @@ function ConditionRow({
   onUpdate,
   onRemove,
   onOpenFlow,
+  isPhase1,
 }: {
   row: QueryBuilderRowState;
   canRemove: boolean;
@@ -587,10 +590,13 @@ function ConditionRow({
     title: string,
     rowId: string,
   ) => void;
+  isPhase1?: boolean;
 }) {
   const [isActionMenuOpen, setIsActionMenuOpen] = React.useState(false);
   const actionTriggerRef = React.useRef<HTMLButtonElement | null>(null);
   const [openMenuId, setOpenMenuId] = React.useState<string | null>(null);
+  const [panelistAcceptedFiles, setPanelistAcceptedFiles] = React.useState<FileWithPath[]>([]);
+  const [panelistRejectedFiles, setPanelistRejectedFiles] = React.useState<FileRejection[]>([]);
   const [pendingFlow, setPendingFlow] = React.useState<{
     kind: QueryBuilderFlowKind;
     title: string;
@@ -776,7 +782,7 @@ function ConditionRow({
             }}
           />
 
-          {showConditionSelect ? (
+          {showConditionSelect && !isPhase1 ? (
             <>
               <div
                 style={{
@@ -839,7 +845,7 @@ function ConditionRow({
             </>
           ) : null}
 
-          {showHealthConditionSelect ? (
+          {showHealthConditionSelect && !isPhase1 ? (
             <>
               <div
                 style={{
@@ -904,7 +910,7 @@ function ConditionRow({
             </>
           ) : null}
 
-          {showHealthTreatmentSelect ? (
+          {showHealthTreatmentSelect && !isPhase1 ? (
             <>
               <div
                 style={{
@@ -942,6 +948,44 @@ function ConditionRow({
                 />
               </div>
             </>
+          ) : null}
+
+          {showConditionSelect && isPhase1 ? (
+            <div
+              className="panelist-upload-wrapper"
+              style={{
+                flex: '0 0 100%',
+                marginTop: 8,
+                border: '1px solid var(--ld-semantic-color-separator, #e3e4e5)',
+                borderRadius: 8,
+                padding: 12,
+                background: 'var(--ld-semantic-color-surface, #fff)',
+              }}
+            >
+              <FileUpload
+                size="small"
+                singleFile
+                acceptedFileTypes={{
+                  'application/vnd.ms-excel': ['.xls'],
+                  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx'],
+                  'text/csv': ['.csv'],
+                  'text/tab-separated-values': ['.tsv'],
+                }}
+                dropzoneText="Drag and drop panelist ID file here (optional)"
+                acceptedFiles={panelistAcceptedFiles}
+                rejectedFiles={panelistRejectedFiles}
+                onDrop={(accepted, rejected) => {
+                  setPanelistAcceptedFiles(accepted);
+                  setPanelistRejectedFiles(rejected);
+                }}
+                onFileDelete={(_, index) => {
+                  setPanelistAcceptedFiles((prev) => prev.filter((__, i) => i !== index));
+                }}
+                onRejectedFileDelete={(_, index) => {
+                  setPanelistRejectedFiles((prev) => prev.filter((__, i) => i !== index));
+                }}
+              />
+            </div>
           ) : null}
 
           {showProductSelect ? (
@@ -1263,10 +1307,12 @@ export function SurveyAudienceQueryBuilder({
   isEnabled,
   onFlowModalOpenChange,
   onQueryCompleteChange,
+  isPhase1,
 }: {
   isEnabled: boolean;
   onFlowModalOpenChange?: (isOpen: boolean) => void;
   onQueryCompleteChange?: (isComplete: boolean) => void;
+  isPhase1?: boolean;
 }) {
   const [rows, setRows] = React.useState<QueryBuilderRowState[]>(() => {
     const storedSelections = readSessionStoreSelections();
@@ -1440,6 +1486,7 @@ export function SurveyAudienceQueryBuilder({
               onUpdate={updateRow}
               onRemove={removeRow}
               onOpenFlow={openFlow}
+              isPhase1={isPhase1}
             />
           </React.Fragment>
         ))}

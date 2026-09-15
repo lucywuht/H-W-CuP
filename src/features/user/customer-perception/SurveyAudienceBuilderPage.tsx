@@ -49,6 +49,7 @@ interface CensusCategory {
 interface SurveyAudienceBuilderPageProps {
   projectName: string;
   onBack: () => void;
+  isPhase1?: boolean;
 }
 
 const CENSUS_DATA: CensusCategory[] = [
@@ -506,6 +507,7 @@ function EnrichmentOptionRow({
 function SurveyAudienceBuilderPageContent({
   projectName,
   onBack,
+  isPhase1,
 }: SurveyAudienceBuilderPageProps) {
   const { addSnack } = useSnackbar();
   const [customRespondents, setCustomRespondents] = React.useState<string>('');
@@ -919,12 +921,16 @@ function SurveyAudienceBuilderPageContent({
                 Icon: LDIcon.Grid,
                 onClick: () => setIsAddEnrichmentModalOpen(false),
               },
-              {
-                id: 'health-condition',
-                label: 'Health condition',
-                Icon: LDIcon.Heart,
-                onClick: () => setEnrichmentModalView('health-condition'),
-              },
+              ...(!isPhase1
+                ? [
+                    {
+                      id: 'health-condition',
+                      label: 'Health condition',
+                      Icon: LDIcon.Heart,
+                      onClick: () => setEnrichmentModalView('health-condition'),
+                    },
+                  ]
+                : []),
             ].map(({ id, label, Icon, onClick }) => (
               <EnrichmentOptionRow
                 key={id}
@@ -1768,6 +1774,7 @@ function SurveyAudienceBuilderPageContent({
                   isEnabled={audienceMode === 'custom'}
                   onFlowModalOpenChange={handleFlowModalOpenChange}
                   onQueryCompleteChange={setIsAudienceQueryComplete}
+                  isPhase1={isPhase1}
                 />
                 {audienceMode === 'custom' && isAudienceQueryComplete ? (
                   <div style={{ alignSelf: 'flex-start' }}>
