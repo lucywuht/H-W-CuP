@@ -39,7 +39,7 @@ function LandingPage({ onNavigate }: { onNavigate: (page: AppPage) => void }) {
             color: 'var(--ld-semantic-color-text-subtle, #515357)',
           }}
         >
-          Health &amp; Wellness Customer Understanding Platform
+          Health &amp; Wellness in Customer Perception
         </div>
       </div>
 
