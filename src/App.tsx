@@ -184,7 +184,12 @@ export default function App() {
           </div>
         )}
         {page === 'phase-1' && (
-          <Phase1Page onBack={() => setPage('landing')} />
+          <div style={{ minHeight: '100vh', overflow: 'auto' }}>
+            <SurveyAudienceBuilderPage
+              projectName="H&W CuP Survey"
+              onBack={() => setPage('landing')}
+            />
+          </div>
         )}
       </SnackbarProvider>
     </A11yAnnouncementProvider>
