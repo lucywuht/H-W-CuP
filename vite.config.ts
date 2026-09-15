@@ -4,7 +4,7 @@ import path from "node:path";
 import fs from "node:fs";
 
 export default defineConfig({
-  
+  base: '/H-W-CuP/',
   server: {
     port: 3099,
   },
